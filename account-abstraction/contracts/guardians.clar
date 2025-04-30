@@ -11,10 +11,9 @@
 
 ;; --- Access Control ---
 
-;; Private function to check if the caller is authorized (e.g., contract owner or DAO)
-(define-private (is-dao-or-extension)
-  (ok (asserts! (or (is-eq tx-sender .executor-dao) (contract-call? .executor-dao is-extension contract-caller)) ERR_UNAUTHORIZED))
-)
+;;(define-private (is-dao-or-extension)
+;;  (ok (asserts! (or (is-eq tx-sender .executor-dao) (contract-call? .executor-dao is-extension contract-caller)) ERR_UNAUTHORIZED))
+;;)
 
 
 
